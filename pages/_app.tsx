@@ -1,3 +1,6 @@
+import 'tailwindcss/tailwind.css'
+import '../styles/global.css'
+
 import type { AppProps } from 'next/app'
 import { ApolloClient, InMemoryCache } from '@apollo/client'
 import { ApolloProvider } from '@apollo/client'

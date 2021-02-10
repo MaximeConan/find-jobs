@@ -9,30 +9,26 @@ import { Job } from '../../interfaces/jobs.interface'
 import { GET_JOBS } from '../../queries/jobsQueries'
 
 type Props = {
-  jobs: Job[]
+	jobs: Job[]
 }
 
 const JobsPage = ({ jobs }: Props) => (
-  <Layout title="Users List | Next.js + TypeScript Example">
-    <h1>Jobs List</h1>
-    <p>
-      Example fetching data from inside <code>getStaticProps()</code>.
-    </p>
-    <p>You are currently on: /jobs</p>
-    <List items={jobs} />
-    <p>
-      <Link href="/">
-        <a>Go home</a>
-      </Link>
-    </p>
-  </Layout>
+	<Layout title="Users List | Next.js + TypeScript Example">
+		<h1>Jobs List</h1>
+		<List items={jobs} />
+		<p>
+			<Link href="/">
+				<a>Go home</a>
+			</Link>
+		</p>
+	</Layout>
 )
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await client.query({query: GET_JOBS})
-  const jobs:Job[] = data?.jobs
+	const { data } = await client.query({ query: GET_JOBS })
+	const jobs: Job[] = data?.jobs
 
-  return { props: { jobs } }
+	return { props: { jobs } }
 }
 
 export default JobsPage

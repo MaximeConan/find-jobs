@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+
+h1 {
+	@apply text-3xl mb-4;
+}
+
+h2 {
+	@apply text-2xl mb-4;
+}
+
+h3 {
+	@apply text-xl mb-4;
+}
+
+li,
+p {
+	@apply mb-3;
+}
+
+div > li:last-of-type,
+div > p:last-of-type {
+	@apply m-0;
+}
+
+.container {
+	@apply m-auto;
+}
+
+.primary-bg {
+	@apply bg-red-300 text-white;
+}
+
+.secondary-bg {
+	@apply bg-yellow-400 text-white;
+}
+
+@tailwind utilities;
