@@ -1,7 +1,7 @@
 const Footer = () => {
 	return (
 		<div className="my-4 p-4 primary-bg rounded-md">
-			Site dévelopé à Paris, retrouvez moi sur{' '}
+			TypeScript, GraphQL and Next.js project, find me on{' '}
 			<a
 				className="text-gray-700 duration-300 hover:opacity-50"
 				href="https://github.com/MaximeConan"

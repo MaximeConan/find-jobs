@@ -1,14 +1,14 @@
-import { Tag } from '../interfaces/jobs.interface'
+import { ITag } from '../interfaces/jobs.interface'
 
 type Props = {
-	tags: Tag[]
+	tags: ITag[]
 }
 
 const Badge = ({ tags }: Props) => {
 	return (
-		<div>
-			{tags.map((tag: Tag, index) => (
-				<span className="secondary-bg mr-2 p-2 rounded-md" key={index}>
+		<div className="max-w-full flex flex-wrap">
+			{tags.map((tag: ITag, index: number) => (
+				<span className="primary-bg mr-2 p-2 mb-2 rounded-md" key={index}>
 					{tag.name}
 				</span>
 			))}

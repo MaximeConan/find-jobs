@@ -2,16 +2,12 @@ import 'tailwindcss/tailwind.css'
 import '../styles/global.css'
 
 import type { AppProps } from 'next/app'
-import { ApolloClient, InMemoryCache } from '@apollo/client'
 import { ApolloProvider } from '@apollo/client'
+
+import { client } from '../client'
 
 import useNavigationLoading from '../hooks/useNavigationLoading'
 import Spiner from '../components/Spiner'
-
-export const client = new ApolloClient({
-	uri: 'https://api.graphql.jobs/',
-	cache: new InMemoryCache(),
-})
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const isLoading = useNavigationLoading()

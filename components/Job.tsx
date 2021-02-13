@@ -1,22 +1,24 @@
 import * as React from 'react'
 import ReactMarkdown from 'react-markdown'
 
-import { City, Job } from '../interfaces/jobs.interface'
+import Company from './Company'
+
+import { ICity, IJob } from '../interfaces/jobs.interface'
 
 type Props = {
-	item: Job
+	item: IJob
 }
 
 const ListDetail = ({ item: job }: Props) => (
 	<div>
-		<h1>Detail for {job.title}</h1>
-		<p>Job ID : {job.id}</p>
+		<h1>{job.title}</h1>
+		<Company data={job.company} />
 		<ReactMarkdown source={job.description} />
 		<p>
 			<strong>Cities</strong>
 		</p>
 		<ul>
-			{job.cities.map((city: City, index: number) => (
+			{job.cities.map((city: ICity, index: number) => (
 				<li key={index}>{city.name}</li>
 			))}
 		</ul>

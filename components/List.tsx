@@ -1,17 +1,17 @@
 import * as React from 'react'
 
-import ListItem from './ListItem'
-import { Job } from '../interfaces/jobs.interface'
+import Card from './Card'
+import { IJob } from '../interfaces/jobs.interface'
 
 type Props = {
-	items: Job[]
+	items: IJob[]
 }
 
 const List = ({ items }: Props) => (
 	<ul>
 		{items.map((item) => (
 			<li key={item.id}>
-				<ListItem data={item} />
+				<Card data={item} />
 			</li>
 		))}
 	</ul>

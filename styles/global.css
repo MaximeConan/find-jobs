@@ -24,15 +24,15 @@ div > p:last-of-type {
 }
 
 .container {
-	@apply m-auto;
+	@apply m-auto px-5 lg:p-0;
 }
 
 .primary-bg {
-	@apply bg-red-300 text-white;
+	@apply bg-blue-50 text-blue-400;
 }
 
 .secondary-bg {
-	@apply bg-yellow-400 text-white;
+	@apply bg-blue-400 text-white;
 }
 
 @tailwind utilities;

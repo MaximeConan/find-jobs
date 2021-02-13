@@ -1,18 +1,26 @@
-export type City = {
+export type ICity = {
 	id: string
 	name: string
 }
 
-export type Tag = {
+export type ITag = {
 	id: string
 	name: string
 	slug: string
 }
 
-export type Job = {
+export type ICompany = {
+	id: string
+	name: string
+	websiteUrl: string
+	logoUrl: string
+}
+
+export type IJob = {
 	id: string
 	title: string
-	tags: Tag[]
+	tags: ITag[]
 	description: string
-	cities: City[]
+	cities: ICity[]
+	company: ICompany
 }
