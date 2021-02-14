@@ -8,7 +8,7 @@ const Badge = ({ tags }: Props) => {
 	return (
 		<div className="max-w-full flex flex-wrap">
 			{tags.map((tag: ITag, index: number) => (
-				<span className="primary-bg mr-2 p-2 mb-2 rounded-md" key={index}>
+				<span data-testid="__badge__" className="primary-bg mr-2 p-2 mb-2 rounded-md" key={index}>
 					{tag.name}
 				</span>
 			))}

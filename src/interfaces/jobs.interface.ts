@@ -21,6 +21,6 @@ export type IJob = {
 	title: string
 	tags: ITag[]
 	description: string
-	cities: ICity[]
+	cities?: ICity[]
 	company: ICompany
 }
