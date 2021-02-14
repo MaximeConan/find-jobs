@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { isNil } from 'lodash'
 import ReactMarkdown from 'react-markdown'
 
 import Company from './Company'
@@ -18,9 +19,7 @@ const ListDetail = ({ item: job }: Props) => (
 			<strong>Cities</strong>
 		</p>
 		<ul>
-			{job.cities.map((city: ICity, index: number) => (
-				<li key={index}>{city.name}</li>
-			))}
+			{!isNil(job.cities) && job.cities.map((city: ICity, index: number) => <li key={index}>{city.name}</li>)}
 		</ul>
 	</div>
 )
